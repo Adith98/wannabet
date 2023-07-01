@@ -1,0 +1,19 @@
+{
+  "name": "wannabet",
+  "version": "1.0.0",
+  "description": "A fun way to keep tab on your wagers with friends",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adith98/wannabet.git"
+  },
+  "author": "Adith Shetty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adith98/wannabet/issues"
+  },
+  "homepage": "https://github.com/Adith98/wannabet#readme"
+}
