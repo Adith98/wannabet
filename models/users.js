@@ -3,8 +3,7 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
     name: {
-        type: String,
-        required: true
+        type: String
     },
     phone: {
         type: String,
@@ -15,7 +14,6 @@ const userSchema = new Schema({
     },
     dob: {
         type: Date,
-        required: true
     },
     email: {
         type: String
@@ -25,6 +23,7 @@ const userSchema = new Schema({
         ref: 'bets',
         unique: true
     }],
+    registered: { type: Boolean, default: false },
     created_on: { type: Date }
 })
 
