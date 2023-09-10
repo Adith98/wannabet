@@ -34,7 +34,8 @@ export const add_bet_info = asyncHandler(async (req, res, next) => {
 
 // Place a Bet.
 export const place_bet = asyncHandler(async (req, res, next) => {
-  res.send("NOT IMPLEMENTED: Place a Bet");
+  console.log(req.body)
+  res.send("NOT IMPLEMENTED: Place a Bet\n");
 });
 
 // Update a Bet.
