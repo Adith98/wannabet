@@ -10,7 +10,7 @@ router.get("/", function (req, res) {
 });
 
 
-router.get("/placebet", place_bet);
+// router.get("/placebet", place_bet);
 
 router.post("/placebet", place_bet);
 

@@ -2,10 +2,8 @@
  * Handles functionalities for /bets routes
  */
 
-import Bet from "../models/bets.js"
-import User from "../models/users.js"
 import asyncHandler from "express-async-handler"
-
+import { add_bet } from "../operations/operations.js";
 
 // Add a User.
 export const add_user = asyncHandler(async (req, res, next) => {
@@ -34,11 +32,14 @@ export const add_bet_info = asyncHandler(async (req, res, next) => {
 
 // Place a Bet.
 export const place_bet = asyncHandler(async (req, res, next) => {
-  console.log(req.body)
-  res.send("NOT IMPLEMENTED: Place a Bet\n");
+
+  const betData = req.body
+  add_bet(betData)
+    .then(res.status(201).send("Bet placed successfully."))
+
 });
 
 // Update a Bet.
 export const update_bet = asyncHandler(async (req, res, next) => {
-    res.send("NOT IMPLEMENTED: Update a Bet");
+  res.send("NOT IMPLEMENTED: Update a Bet");
 });

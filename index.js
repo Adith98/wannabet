@@ -19,7 +19,11 @@ app.use('/api', routes)
 //setting up the port
 const PORT = process.env.PORT || 5000;
 
-//Connect to Database
-mongoose.connect(process.env.DATABASE_URL)
+// Wait for database to connect, logging an error if there is a problem
+connectToMongo()
     .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
-    .catch((error) => console.log(error.message));
+    .catch((err) => console.log(err));
+
+async function connectToMongo() {
+    await mongoose.connect(process.env.DATABASE_URL);
+}
